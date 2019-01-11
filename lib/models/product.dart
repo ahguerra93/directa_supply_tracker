@@ -3,5 +3,6 @@ class Product {
   String brand;
   String category;
   double standardPrice;
-  Product({this.name, this.brand, this.category, this.standardPrice});
+  List<String> locations;
+  Product({this.name, this.brand, this.category, this.standardPrice, this.locations});
 }

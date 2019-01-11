@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'models/allModels.dart';
+import 'src/data.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -29,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
+    List<OrderItem> _itemList =  orders;
   @override
   Widget build(BuildContext context) {
     
@@ -41,17 +42,27 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
        
-        child: Column(
-         
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'HELLO',
-            ),
-          ],
+        child: ListView(
+          
+          
+          children: _itemList.map(buildItem).toList(),
+          
         ),
       ),
       
+    );
+  }
+
+  Widget buildItem(OrderItem oItem){
+    return Container(padding: EdgeInsets.all(5),
+    
+    // color: Colors.orange,
+    child: ListTile(title: Text(oItem.product.name, style: TextStyle(fontSize: 20),),
+    subtitle: Text("Cantidad: ${oItem.cuantity}"),
+    onTap: (){
+      
+    },),
+    
     );
   }
 }
