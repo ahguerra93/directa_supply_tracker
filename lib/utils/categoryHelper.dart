@@ -9,8 +9,8 @@ class CategoryHelper {
     switch (category) {
       case "Perfiles":
         return Transform.rotate(
-          angle: -pi / 5.0,
-          child: Icon(FontAwesomeIcons.bars),
+          angle: -pi / 3.9,
+          child: Icon(FontAwesomeIcons.equals),
         );
         // RotatedBox(
         //   quarterTurns: 1,
