@@ -2,15 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:cupertino_icons/placeholder.txt';
+import 'dart:math';
 
 class CategoryHelper {
   static Widget getIcon(String category) {
     switch (category) {
       case "Perfiles":
-        return RotatedBox(
-          quarterTurns: 1,
+        return Transform.rotate(
+          angle: -pi / 5.0,
           child: Icon(FontAwesomeIcons.bars),
         );
+        // RotatedBox(
+        //   quarterTurns: 1,
+        //   child: Icon(FontAwesomeIcons.bars),
+        // );
         break;
 
       case "Paneles":
