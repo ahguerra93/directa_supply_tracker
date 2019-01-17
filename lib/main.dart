@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'models/allModels.dart';
 import 'src/data.dart';
+import 'utils/categoryHelper.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         primaryColorLight: Colors.white,
         canvasColor: Colors.white,
-        primaryColorDark: Color(0xFF52110C),
+        primaryColorDark: Color(0xFF8A0A1E),
       ),
       home: MyHomePage(title: 'Compras'),
     );
@@ -100,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
       // color: Colors.orange,
       child: ListTile(
-        leading: Icon(Icons.build,),
+        leading: CategoryHelper.getIcon(oItem.product.category),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
