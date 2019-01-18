@@ -22,7 +22,7 @@ class CategoryHelper {
         var panels = IconData(0xf482,
             fontFamily: CupertinoIcons.iconFont,
             fontPackage: CupertinoIcons.iconFontPackage);
-        return Icon(panels);
+        return Icon(Icons.layers);
         break;
 
       case "Varios":
